@@ -8,18 +8,19 @@ const synth = new Tone.Synth({
   envelope: { attack: 0.001, decay: 0.1, sustain: 0.1, release: 1.2 }
 }).toDestination();
 
-// High synth with a different waveform
+// Higher octave synth
 const highSynth = new Tone.Synth({
   oscillator: { type: "triangle" },
   envelope: { attack: 0.01, decay: 0.2, sustain: 0.2, release: 1.5 }
 }).toDestination();
 
-// Bass synth with a deeper sound
+// Bass synth lower octave
 const bassSynth = new Tone.Synth({
   oscillator: { type: "sine" },
-  envelope: { attack: 0.01, decay: 0.3, sustain: 0.2, release: 2 }
+  envelope: { attack: 0.01, decay: 0.3, sustain: 0.2, release: 1.0 }
 }).toDestination();
 
+//effects
 const effect1 = new Tone.PingPongDelay({
   delayTime: "4n",
   feedback: 0.2,
